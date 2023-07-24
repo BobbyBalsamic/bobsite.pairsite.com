@@ -2,7 +2,8 @@
 
 $fullname = $_GET['fname'];
 if(empty($fullname)) {
-  die('Full Name Required');
+  echo 'Full Name Required';
+  return;
 }
 
 $bad_chars = array(";", ">", "<", "#", "&", "/", "~", "`", "$", "*", "\\", "|", "[", "]", "{", "}");
@@ -14,7 +15,7 @@ foreach($bad_chars as $char){
 }
 $sanatized_fullname = str_replace(" ", "\\ ", $fullname);
 
-$guestbook = fopen("guestbook.txt", "a") or die("Unable to open this file!");
+$guestbook = fopen("guestbook.txt", "a") or die('No file detected');
 $today = date("F j, Y, g:i a");
 fwrite($guestbook, "$today: $sanatized_fullname\n");
 $txt = "Dingus Detected\n";
