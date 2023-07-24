@@ -40,13 +40,28 @@ __This text__ is also strong
     git status
 
 * Stage files in preparation for a commit
+
     git add -A
 
-* To push your initial commit to your repo
-    git push -u origin master
+* Commit changes to repo
+
+    git commit
+
 
 * To link git to your github account and project
+
     git remote add origin https://github.com/USERNAME/PROJECT
 
+
+* Change origin
+
+    git remote set-url origin NEW.URL
+
+
+* To push your initial commit to your repo
+
+    git push -u origin master
+
 * Push commit any time after first commit
+
     git push
