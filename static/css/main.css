@@ -1,0 +1,8 @@
+body {
+  min-height: 100%;
+  font-family: 'Bungee Spice', monospace !important;
+  font-color:red; 
+  font-size: 1.5em !important;
+  background: blue;
+
+}
